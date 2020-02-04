@@ -1,3 +1,5 @@
+//進入點
+
 //官方預設載入
 import Vue from 'vue'
 import App from './App.vue'

@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- 看要用path呈現還是name -->
+      <router-link to="/home">Home</router-link> |
+      <!-- <router-link to="/about">About</router-link> -->
+      <router-link :to="{name:'關於'}">About</router-link> |
+      <router-link :to="{name:'新分頁'}">Page</router-link>
     </div>
     <router-view/>
   </div>
