@@ -54,8 +54,14 @@ const routes = [
               path:'card3',
               component:()=>import('@/components/card_child/card3')
           },
+          
       ]
-  }
+  },
+  {
+    name:'新聞',
+    path:'/news/:apiId',
+    component:()=>import('@/components/news')
+  },
 ]
 
 const router = new VueRouter({
