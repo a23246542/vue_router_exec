@@ -1,5 +1,19 @@
 <template>
-  <div id="app">
+  <div id="div-app">
+    
+    <ul class="nav">
+        <li class="nav-item">
+            <router-link class="nav-link" to='/newPage' >分頁1</router-link>
+        </li>
+        <li class="nav-item">
+            <router-link class="nav-link" :to="{name:'新分頁2'}">分頁2</router-link>
+        </li>
+        <li class="nav-item">
+            <router-link class="nav-link" :to="{name:'卡片'}">卡片</router-link>
+        </li>
+        
+    </ul>
+
     <div id="nav">
       <!-- 看要用path呈現還是name -->
       <router-link to="/home">Home</router-link> |
@@ -12,7 +26,7 @@
 </template>
 
 <style lang="scss">
-#app {
+#div-app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import Home from '../views/Home.vue';
 import Page from '@/views/pages/page';
+import Page2 from '@/views/pages/page2';
 //自訂分頁元件
 
 Vue.use(VueRouter)
@@ -27,6 +28,34 @@ const routes = [
     name: '新分頁',
     component: Page
   },
+  {
+    path:'/newPage2',
+    name:'新分頁2',
+    component:Page2
+  },
+  {
+      path:'/card',
+      name:'卡片',
+    //   redirect:'卡片1',
+      component:()=>import('@/views/pages/card.vue'),
+      children:[
+          {
+              name:'卡片1',
+              path:'',
+              component:()=>import('@/components/card_child/card1')
+          },
+          {
+              name:'卡片2',
+              path:'card2',
+              component:()=>import('@/components/card_child/card2')
+          },
+          {
+              name:'卡片3',
+              path:'card3',
+              component:()=>import('@/components/card_child/card3')
+          },
+      ]
+  }
 ]
 
 const router = new VueRouter({

@@ -1,7 +1,10 @@
+import '@babel/polyfill'
+import 'mutationobserver-shim'
 //進入點
 
 //官方預設載入
 import Vue from 'vue'
+import './plugins/bootstrap-vue'
 import App from './App.vue'
 //router跟vuex
 import router from './router'

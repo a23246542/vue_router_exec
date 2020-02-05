@@ -1,6 +1,6 @@
 export <template>
     <div>
-        <h1>新增路由路徑</h1>
+        <h1>新增路由路徑2</h1>
         <div class="card" style="width: 18rem;">
             <img src="" class="card-img-top" alt="...">
             <div class="card-body">
