@@ -1,21 +1,26 @@
 <template>
   <div id="div-app">
     
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-            <router-link class="nav-link" to='/newPage' >分頁1</router-link>
-        </li>
-        <li class="nav-item">
-            <router-link class="nav-link" :to="{name:'新分頁2'}">分頁2</router-link>
-        </li>
-        <li class="nav-item">
-            <router-link class="nav-link" :to="{name:'卡片'}">卡片</router-link>
-        </li>
-        <li class="nav-item">
-            <router-link class="nav-link" id="newBtn" :to="{name:'新聞'}">新聞</router-link>
-        </li>
-        
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <router-link class="nav-link" to='/newPage' >分頁1</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="{name:'新分頁2'}">分頁2</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="{name:'卡片'}">卡片</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" id="newBtn" :to="{name:'新聞'}">新聞</router-link>
+                </li>
+            
+            </ul>
+            
+        </div>
+    </nav>
 
     
     <router-view/>
@@ -26,8 +31,8 @@
 export default {
     data(){
         return{
-            apiId:'',
-            newsId:'0492055'
+            // apiId:'',
+            // newsId:'0492055'
         }
     },
     mounted(){
