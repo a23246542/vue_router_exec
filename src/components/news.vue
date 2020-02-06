@@ -1,6 +1,6 @@
 <template>
  <div>
-     <h5 class="card-title">動態路由</h5>
+     <h5 class="card-title">動態路由</h5> //TODO 做query
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
  </div>
