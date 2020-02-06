@@ -63,9 +63,14 @@ const routes = [{
     },
     {
         name: '新聞',
-        path: '/news/',
+        path: '/news',
         component: () => import('@/components/news')
     },
+    {
+        name:'alex單檔',
+        path:'/alex15',
+        component:() => import('@/views/pages/Alex')
+    }
 ]
 
 const router = new VueRouter({

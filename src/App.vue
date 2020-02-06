@@ -16,6 +16,9 @@
                 <li class="nav-item">
                     <router-link class="nav-link" id="newBtn" :to="{name:'新聞'}">新聞</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" id="newBtn" :to="{name:'alex單檔'}">科學單檔模組化</router-link>
+                </li>
             
             </ul>
             
