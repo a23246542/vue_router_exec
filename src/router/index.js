@@ -2,9 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Home from '../views/Home.vue';
-import Page from '@/views/pages/page';
-import Page2 from '@/views/pages/page2';
-import Menu from '@/components/card_child/cardMenu'
+import Page from '@/views/pages/page.vue';
+import Page2 from '@/views/pages/page2.vue';
+import Menu from '@/components/card_child/cardMenu.vue'
 //自訂分頁元件
 
 Vue.use(VueRouter)
@@ -35,18 +35,20 @@ const routes = [{
     },
     {
         name: '卡片',
-        path: '/card',
+        path: '/card.vue',
         //   redirect:'卡片1',
         //   component:()=>import('@/views/pages/card.vue'),
+        redirect:'/card/card1.vue',
         components: {
-            default:()=>import('@/views/pages/card'),
+            default:()=>import('@/views/pages/card.vue'),
             // menuView:()=>import('@/components/card_child/carMenu.vue')??為何失敗
             menuView:()=>Menu
         },
-        children: [{
+        children: [
+            {
                 name: '卡片1',
-                path: '',
-                component: () => import('@/components/card_child/card1')
+                path: 'card1.vue',
+                component: () => import('@/components/card_child/card1.vue')
             },
             {
                 name: '卡片2',

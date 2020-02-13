@@ -11,7 +11,8 @@
                     <router-link class="nav-link" :to="{name:'新分頁2'}">分頁2</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" :to="{name:'卡片'}">卡片</router-link>
+                    <!-- <router-link class="nav-link" :to="{name:'卡片'}">卡片</router-link> -->
+                    <router-link class="nav-link" to="/card" >卡片</router-link>
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link" id="newBtn" :to="{name:'新聞'}">新聞</router-link>
