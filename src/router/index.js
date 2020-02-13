@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Page from '@/views/pages/page.vue';
 import Page2 from '@/views/pages/page2.vue';
-import Menu from '@/components/card_child/cardMenu.vue'
+// import Menu from '@/components/card_child/cardMenu.vue'
 //自訂分頁元件
 
 Vue.use(VueRouter)
@@ -41,8 +41,9 @@ const routes = [{
         redirect:'/card/card1.vue',
         components: {
             default:()=>import('@/views/pages/card.vue'),
-            // menuView:()=>import('@/components/card_child/carMenu.vue')??為何失敗
-            menuView:()=>Menu
+            // menuView:()=>import('@/components/card_child/carMenu.vue')//??為何失敗
+            menuView:()=>import('../components/card_child/cardMenu.vue')//??為何失敗
+            // menuView:()=>Menu
         },
         children: [
             {
