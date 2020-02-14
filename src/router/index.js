@@ -73,6 +73,18 @@ const routes = [{
         name:'alex單檔',
         path:'/alex15',
         component:() => import('@/views/pages/Alex')
+    },
+    {
+        name:'koma',
+        path:'/koma-router',
+        component:()=>import('../views/koma/koma-router.vue'),
+        children:[
+            {
+                name:'dynamic',
+                path:'player/:id',
+                component:()=>import('../views/koma/dynamic.vue')
+            }
+        ]
     }
 ]
 

@@ -20,6 +20,9 @@
                 <li class="nav-item">
                     <router-link class="nav-link" id="newBtn" :to="{name:'alex單檔'}">科學單檔模組化</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" id="newBtn" :to="{name:'koma'}">koma-router</router-link>
+                </li>
             
             </ul>
             
