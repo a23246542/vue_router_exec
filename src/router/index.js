@@ -35,31 +35,44 @@ const routes = [{
     },
     {
         name: '卡片',
-        path: '/card.vue',
+        path: '/card',
         //   redirect:'卡片1',
         //   component:()=>import('@/views/pages/card.vue'),
-        redirect:'/card/card1.vue',
-        components: {
-            default:()=>import('@/views/pages/card.vue'),
-            // menuView:()=>import('@/components/card_child/carMenu.vue')//??為何失敗
-            menuView:()=>import('../components/card_child/cardMenu.vue')//??為何失敗
-            // menuView:()=>Menu
-        },
+        redirect:'/card/card1',
+        // components: {//這些根本不會看到 要寫在子路由
+        //     default:()=>import('@/views/pages/card.vue'),
+        //     // menuView:()=>import('@/components/card_child/carMenu.vue')//??為何失敗
+        //     menuView:()=>import('../components/card_child/cardMenu.vue')//??為何失敗
+        //     // menuView:()=>Menu
+        // },
+        component:()=>import('@/views/pages/card.vue'),
         children: [
             {
                 name: '卡片1',
-                path: 'card1.vue',
-                component: () => import('@/components/card_child/card1.vue')
+                path: 'card1',
+                // component: () => import('@/components/card_child/card1.vue'),
+                components:{
+                    default:()=>import('@/components/card_child/card1.vue'),
+                    menuView:()=>import('@/components/card_child/cardMenu.vue')
+                }
             },
             {
                 name: '卡片2',
                 path: 'card2',
-                component: () => import('@/components/card_child/card2')
+                // component: () => import('@/components/card_child/card2')
+                components:{
+                    default:()=>import('@/components/card_child/card2.vue'),
+                    menuView:()=>import('@/components/card_child/cardMenu.vue')
+                }
             },
             {
                 name: '卡片3',
                 path: 'card3',
-                component: () => import('@/components/card_child/card3')
+                // component: () => import('@/components/card_child/card3')
+                components:{
+                    default:()=>import('@/components/card_child/card3.vue'),
+                    menuView:()=>import('@/components/card_child/cardMenu.vue')
+                }
             },
 
         ]
